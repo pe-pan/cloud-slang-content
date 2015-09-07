@@ -58,7 +58,7 @@ flow:
           publish:
             - json_result
 
-      - loop_docker_images_maintenance:
+      - loop_json:
           loop:
               for: config in json_result[0]['ContainerConfig']
               do:
